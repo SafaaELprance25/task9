@@ -24,7 +24,7 @@ const routes: Routes = [
   {
     path: '**',
     component:ErrorComponent ,
-    title: 'Home details'
+    title: 'Error details'
   },
 ]; 
 
