@@ -16,4 +16,26 @@ submitted = false;
 
 onSubmit() { this.submitted = true; }
 
+profileForm = this.fb.group({
+  firstName: [''],
+  lastName: [''],
+  address: this.fb.group({
+    street: [''],
+    city: [''],
+    state: [''],
+    zip: ['']
+  }),
+  aliases: this.fb.array([
+    this.fb.control('')
+  ])
+});
+get aliases() {
+  return this.profileForm.get('aliases') as FormArray;
+}
+addAlias() {
+  this.aliases.push(this.fb.control(''));
+}
+constructor(private fb: FormBuilder) {
+
+ }
 }
