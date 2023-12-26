@@ -12,6 +12,14 @@ import { ViewuserComponent } from './viewuser/viewuser.component';
 import { EdituserComponent } from './edituser/edituser.component';
 import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
 import { FormBuilder, FormsModule } from '@angular/forms';
+import { AddemploerComponent } from './addemployer/addemploer.component';
+import { EditemployerComponent } from './editemployer/editemployer.component';
+import { ViewemployerComponent } from './viewemployer/viewemployer.component';
+import { DeleteemployerComponent } from './deleteemployer/deleteemployer.component';
+import { UpdatemployerComponent } from './updatemployer/updatemployer.component';
+
+import { HttpClientModule } from '@angular/common/http'
+
 
 @NgModule({
   declarations: [
@@ -22,11 +30,26 @@ import { FormBuilder, FormsModule } from '@angular/forms';
     ViewComponent,
     ViewuserComponent,
     EdituserComponent,
-    ProfileEditorComponent
+    ProfileEditorComponent,
+    AddemploerComponent,
+    EditemployerComponent,
+    ViewemployerComponent,
+    DeleteemployerComponent,
+    UpdatemployerComponent,
+    EmployeeListComponent,
+    CreateEmployeeComponent,
+    UpdateEmployeeComponent,
+    EmployeeDetailsComponent
+
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    
+    HttpClientModule,
+
     RouterModule,
     FormBuilder,
     FormsModule
