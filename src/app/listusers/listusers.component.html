@@ -14,9 +14,48 @@
     DELETE
 </button>
 </li>
-<button class="btn  btn-lg btn-primary m-3 " [routerLink]="['add']">
-    Adduser
-</button>
+<button class="btn  btn-lg btn-primary m-3 " [routerLink]="['addproduct']">
+    addproduct</button>
 </ul>
 </div>
+</div>
+<div>
+<h2>api product list</h2>
+<div  class="row">
+    <div class="col-ml-4"  *ngfor="let product of apiproducts">
+    
+    <div class="card">
+<img width="50" height="50" [src]="producta.image"  class="card-img-top" alt="(
+    (product.title))">
+    <div class="card-body">
+<h5 class="card-title">((producta.title))</h5>
+<P  class="cad-text">((producta.description))</P>
+
+    <P  class="cad-text">Price: $ ((producta.price))</P>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    </div>
+</div>
+
+
 </div>

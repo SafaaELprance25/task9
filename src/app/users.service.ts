@@ -15,6 +15,13 @@ getalluser():User[]{
 usercount(){
   return this .users.length;
 }
+getuserbyid(id:number):User|undefined{
+  return this.users.find(user=> user.id===id);
+}
+deleteuser(id:number){
+  const index =this.users.findIndex((user => user.id === id));
+  this.users.splice(index,1);
+}
 
 private users:User[] = [
   {
